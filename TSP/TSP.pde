@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 int[][] m = {
   {Integer.MAX_VALUE, 21, 7, 13, 15}, // A
   {11, Integer.MAX_VALUE, 19, 12, 25}, // B
@@ -16,24 +14,6 @@ void setup() {
 
 void draw() {
   noLoop();
-}
-
-ArrayList<Integer> findMinCost() {
-  int minValue = Integer.MAX_VALUE;
-  int minI = -1;
-  int minJ = -1;
-
-  for (int i=0; i<m.length; i++) {
-    for (int j=0; j<m[0].length; j++) {
-      if (minValue > m[i][j]) {
-        minValue = m[i][j];
-        minI = i;
-        minJ = j;
-      }
-    }
-  }
-
-  return new ArrayList<Integer>(Arrays.asList(minI, minJ));
 }
 
 void judge(int currentCost, int counter) {
